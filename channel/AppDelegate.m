@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NodeRunner.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,18 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSThread* nodejsThread = nil;
+    nodejsThread = [[NSThread alloc]
+        initWithTarget:self
+        selector:@selector(startNode)
+        object:nil
+    ];
+    // Set 2MB of stack space for the Node.js thread.
+    [nodejsThread setStackSize:2*1024*1024];
+    [nodejsThread start];
     return YES;
 }
 
@@ -35,6 +45,18 @@
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+}
+
+
+- (void)startNode {
+    printf("====>>> startnode\n");
+    NSString* srcPath = [[NSBundle mainBundle] pathForResource:@"nodejs-project/main.js" ofType:@""];
+    NSArray* nodeArguments = [NSArray arrayWithObjects:
+                                @"node",
+                                srcPath,
+                                nil
+                                ];
+    [NodeRunner startEngineWithArguments:nodeArguments];
 }
 
 

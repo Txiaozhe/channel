@@ -14,7 +14,26 @@
 		3D0398922421E14F00F1FEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0398912421E14F00F1FEFB /* Assets.xcassets */; };
 		3D0398952421E14F00F1FEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0398932421E14F00F1FEFB /* LaunchScreen.storyboard */; };
 		3D0398982421E14F00F1FEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0398972421E14F00F1FEFB /* main.m */; };
+		3D0398A32421E27200F1FEFB /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0398A22421E27200F1FEFB /* NodeMobile.framework */; };
+		3D0398A62421E2B500F1FEFB /* NodeRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0398A52421E2B500F1FEFB /* NodeRunner.m */; };
+		3D0398A92421E36D00F1FEFB /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0398A82421E36D00F1FEFB /* NodeMobile.framework */; };
+		3D0398AA2421E36D00F1FEFB /* NodeMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0398A82421E36D00F1FEFB /* NodeMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D0398BD2421EAE000F1FEFB /* nodejs-project in Resources */ = {isa = PBXBuildFile; fileRef = 3D0398BC2421EAE000F1FEFB /* nodejs-project */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D0398AB2421E36D00F1FEFB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3D0398AA2421E36D00F1FEFB /* NodeMobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3D0398822421E14D00F1FEFB /* channel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = channel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +48,11 @@
 		3D0398942421E14F00F1FEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D0398962421E14F00F1FEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0398972421E14F00F1FEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D0398A22421E27200F1FEFB /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NodeMobile.framework; sourceTree = "<group>"; };
+		3D0398A42421E29700F1FEFB /* NodeRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeRunner.h; sourceTree = "<group>"; };
+		3D0398A52421E2B500F1FEFB /* NodeRunner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeRunner.m; sourceTree = "<group>"; };
+		3D0398A82421E36D00F1FEFB /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NodeMobile.framework; path = "../../Downloads/nodejs-mobile-v0.2.2-ios/Release-universal/NodeMobile.framework"; sourceTree = "<group>"; };
+		3D0398BC2421EAE000F1FEFB /* nodejs-project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nodejs-project"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0398A92421E36D00F1FEFB /* NodeMobile.framework in Frameworks */,
+				3D0398A32421E27200F1FEFB /* NodeMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +71,11 @@
 		3D0398792421E14D00F1FEFB = {
 			isa = PBXGroup;
 			children = (
+				3D0398BC2421EAE000F1FEFB /* nodejs-project */,
+				3D03989E2421E23900F1FEFB /* libnode */,
 				3D0398842421E14D00F1FEFB /* channel */,
 				3D0398832421E14D00F1FEFB /* Products */,
+				3D0398A72421E36D00F1FEFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +101,34 @@
 				3D0398932421E14F00F1FEFB /* LaunchScreen.storyboard */,
 				3D0398962421E14F00F1FEFB /* Info.plist */,
 				3D0398972421E14F00F1FEFB /* main.m */,
+				3D0398A42421E29700F1FEFB /* NodeRunner.h */,
+				3D0398A52421E2B500F1FEFB /* NodeRunner.m */,
 			);
 			path = channel;
+			sourceTree = "<group>";
+		};
+		3D03989E2421E23900F1FEFB /* libnode */ = {
+			isa = PBXGroup;
+			children = (
+				3D0398A12421E27200F1FEFB /* Release-universal */,
+			);
+			path = libnode;
+			sourceTree = "<group>";
+		};
+		3D0398A12421E27200F1FEFB /* Release-universal */ = {
+			isa = PBXGroup;
+			children = (
+				3D0398A22421E27200F1FEFB /* NodeMobile.framework */,
+			);
+			path = "Release-universal";
+			sourceTree = "<group>";
+		};
+		3D0398A72421E36D00F1FEFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D0398A82421E36D00F1FEFB /* NodeMobile.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +141,7 @@
 				3D03987E2421E14D00F1FEFB /* Sources */,
 				3D03987F2421E14D00F1FEFB /* Frameworks */,
 				3D0398802421E14D00F1FEFB /* Resources */,
+				3D0398AB2421E36D00F1FEFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0398BD2421EAE000F1FEFB /* nodejs-project in Resources */,
 				3D0398952421E14F00F1FEFB /* LaunchScreen.storyboard in Resources */,
 				3D0398922421E14F00F1FEFB /* Assets.xcassets in Resources */,
 				3D0398902421E14D00F1FEFB /* Main.storyboard in Resources */,
@@ -146,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0398A62421E2B500F1FEFB /* NodeRunner.m in Sources */,
 				3D03988D2421E14D00F1FEFB /* ViewController.m in Sources */,
 				3D0398872421E14D00F1FEFB /* AppDelegate.m in Sources */,
 				3D0398982421E14F00F1FEFB /* main.m in Sources */,
@@ -291,7 +349,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28858KT9PJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libnode/Release-universal",
+				);
 				INFOPLIST_FILE = channel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +373,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28858KT9PJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libnode/Release-universal",
+				);
 				INFOPLIST_FILE = channel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
