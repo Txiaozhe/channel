@@ -49,7 +49,6 @@
 
 
 - (void)startNode {
-    printf("====>>> startnode\n");
     NSString* srcPath = [[NSBundle mainBundle] pathForResource:@"nodejs-project/main.js" ofType:@""];
     NSArray* nodeArguments = [NSArray arrayWithObjects:
                                 @"node",

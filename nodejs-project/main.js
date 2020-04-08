@@ -15,6 +15,7 @@ const info = {
     version: process.versions
 }
 
-setInterval(() => {
-  console.log('======>>> ', JSON.stringify(info))
-}, 2000)
+console.log('>>>> system info: ', JSON.stringify(info))
+
+const _ = require('lodash')
+console.log('>>>> use loadsh: ', _.add(1, 2))

@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "node part of the project",
   "main": "main.js",
-  "author": "janeasystems",
-  "license": ""
+  "author": "jimtang",
+  "license": "",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
 }
